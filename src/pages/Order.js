@@ -118,38 +118,38 @@ const Order = () => {
 
       <div className="rounded-xl relative">
       <div className="absolute w-full h-full bg-black/40 text-white text-center">
-          <p className="font-bold text-2xl px-2 pt-10">Yellow Fin sashimi</p>
-          <p className="font-bold text-[15px] px-2">Price: $2.00</p>
+          <p className="font-bold text-2xl px-2 pt-10">Spicy Tuna <br></br>Roll</p>
+          <p className="font-bold text-[15px] px-2">Price: $4.75</p>
           <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">Place Order</button>
       </div>
-      <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://ocwildseafood.com/cdn/shop/articles/Ahi_Tuna_Sashimi_Seafood_Recipe_1024x.jpg?v=1591853624" alt="/"></img>
+      <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://www.rachelphipps.com/wp-content/uploads/2020/12/Spicy-Tinned-Tuna-Rolls.jpg" alt="/"></img>
     </div>
     <div className="rounded-xl relative">
     <div className="absolute w-full h-full bg-black/40 text-white text-center">
-        <p className="font-bold text-2xl px-2 pt-10">Yellow Fin sashimi</p>
-        <p className="font-bold text-[15px] px-2">Price: 2.00</p>
+        <p className="font-bold text-2xl px-2 pt-10">Shrimp Tempura Roll</p>
+        <p className="font-bold text-[15px] px-2">Price: 6.40</p>
         <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">Place Order</button>
     </div>
-    <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://ocwildseafood.com/cdn/shop/articles/Ahi_Tuna_Sashimi_Seafood_Recipe_1024x.jpg?v=1591853624" alt="/"></img>
+    <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://norecipes.com/wp-content/uploads/2022/02/shrimp-tempura-roll-004.jpg" alt="/"></img>
   </div>
 
   <div className="rounded-xl relative">
   <div className="absolute w-full h-full bg-black/40 text-white text-center">
-      <p className="font-bold text-2xl px-2 pt-10">Yellow Fin sashimi</p>
+      <p className="font-bold text-2xl px-2 pt-10">Ahi Sashimi</p>
       <p className="font-bold text-[15px] px-2">Price: 2.00</p>
       <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">Place Order</button>
   </div>
   <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://ocwildseafood.com/cdn/shop/articles/Ahi_Tuna_Sashimi_Seafood_Recipe_1024x.jpg?v=1591853624" alt="/"></img>
 </div>
 
-<div className="rounded-xl relative">
-<div className="absolute w-full h-full bg-black/40 text-white text-center">
-    <p className="font-bold text-2xl px-2 pt-10">Yellow Fin sashimi</p>
-    <p className="font-bold text-[15px] px-2">Price: 2.00</p>
-    <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">Place Order</button>
-</div>
-<img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://ocwildseafood.com/cdn/shop/articles/Ahi_Tuna_Sashimi_Seafood_Recipe_1024x.jpg?v=1591853624" alt="/"></img>
-</div>
+        <div className="rounded-xl relative">
+        <div className="absolute w-full h-full bg-black/40 text-white text-center">
+            <p className="font-bold text-2xl px-2 pt-10">Ikura Sushi</p>
+            <p className="font-bold text-[15px] px-2">Price: 8.00</p>
+            <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">Place Order</button>
+        </div>
+        <img className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded" src="https://www.sushi-pedia.com/static/59cc5443d7eaaf02d61bff50a2597469/91adb/ikura-salmon-roe-sushi-opener.jpg" alt="/"></img>
+        </div>
       </div>
 
       </div>
