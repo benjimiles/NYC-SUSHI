@@ -8,22 +8,22 @@ const Order = () => {
   return (
     <div>
       <NavBar />
-      <div className="w-full h-screen top-[10px] bg-zinc-900/70">
+      <div className="w-full h-screen top-[10px] bg-zinc-800/80">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           className="w-full h-full object-cover absolute -z-10"
         ></img>
 
-        <div className="w-full h-[30%] text-center flex flex-col items-center justify-center px-4 text-white">
-          <h1 className="text-[25px] mt-4 text-white">
-            Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here
-          </h1>
-          <p className="text-white text-[25px]">Our Menu:</p>
+        <div className="w-full h-[20%] text-center flex flex-col items-center justify-center text-white">
+          <h1 className="">Our Menu</h1>
+          <p className="">
+            Order your favorite Sushi, Sashimi, <br></br> and all the other Japanese Foods you desire here
+          </p>
         </div>
 
-        <div className="max-w-full mx-auto p-4 py-0 grid md:grid-cols-5 gap-6">
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+        <div className="max-w-full mx-auto px-20 py-0 grid md:grid-cols-5 gap-10">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">California roll</p>
               <p className="font-bold text-[15px] px-2">Price: $2.50</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -37,8 +37,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">rainbow roll</p>
               <p className="font-bold text-[15px] px-2">Price: $3.50</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -52,8 +52,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">dragon roll</p>
               <p className="font-bold text-[15px] px-2">Price: $4.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -67,8 +67,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Salmon Sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: $2.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -82,8 +82,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">YellowTail Sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: $2.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -97,8 +97,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">White Tuna Sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: $2.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -111,8 +111,8 @@ const Order = () => {
               alt="/"
             ></img>
           </div>
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Red Tuna sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: $2.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -126,8 +126,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Spider Roll</p>
               <p className="font-bold text-[15px] px-2">Price: $5.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -141,8 +141,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Eel avocado roll</p>
               <p className="font-bold text-[15px] px-2">Price: $4.50</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -156,8 +156,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Alaska Roll</p>
               <p className="font-bold text-[15px] px-2">Price: $4.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -171,8 +171,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Tuna Tataki sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: $2.50</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -186,11 +186,9 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
-              <p className="font-bold text-2xl px-2 pt-10">
-                Spicy Tuna <br></br>Roll
-              </p>
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
+              <p className="font-bold text-2xl px-2 pt-10">Spicy Tuna Roll</p>
               <p className="font-bold text-[15px] px-2">Price: $4.75</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
                 Place Order
@@ -202,8 +200,8 @@ const Order = () => {
               alt="/"
             ></img>
           </div>
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Shrimp Tempura Roll</p>
               <p className="font-bold text-[15px] px-2">Price: 6.40</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -217,8 +215,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Ahi Sashimi</p>
               <p className="font-bold text-[15px] px-2">Price: 2.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
@@ -232,8 +230,8 @@ const Order = () => {
             ></img>
           </div>
 
-          <div className="rounded-xl relative">
-            <div className="absolute w-full h-full bg-black/40 text-white text-center">
+          <div className="drop-shadow-2xl relative">
+            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">Ikura Sushi</p>
               <p className="font-bold text-[15px] px-2">Price: 8.00</p>
               <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
