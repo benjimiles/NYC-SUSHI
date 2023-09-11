@@ -11,17 +11,17 @@ const Order = () => {
       <div className="w-full h-screen top-[10px] bg-zinc-800/80">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          className="w-full h-full object-cover absolute -z-10"
+          className="w-full h-full object-fill absolute -z-10"
         ></img>
 
         <div className="w-full h-[20%] text-center flex flex-col items-center justify-center text-white">
-          <h1 className="">Our Menu</h1>
-          <p className="">
-            Order your favorite Sushi, Sashimi, <br></br> and all the other Japanese Foods you desire here
+          <div className="text-8xl">Our Menu</div>
+          <p className="pt-5 text-2xl">
+            Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.
           </p>
         </div>
 
-        <div className="max-w-full mx-auto px-20 py-0 grid md:grid-cols-5 gap-10">
+        <div className="max-w-full mx-auto px-40 py-100 grid md:grid-cols-5 gap-10">
           <div className="drop-shadow-2xl relative">
             <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
               <p className="font-bold text-2xl px-2 pt-10">California roll</p>
