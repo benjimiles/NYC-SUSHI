@@ -1,8 +1,8 @@
-"use client"
+'use client';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // Initialize the context with the same type of data you plan to put in it.
-const AuthContext = createContext([false, () => { }]);
+const AuthContext = createContext([false, () => {}]);
 
 export function useAuth() {
   const context = useContext(AuthContext);
@@ -24,9 +24,5 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  return (
-    <AuthContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={[isLoggedIn, setIsLoggedIn]}>{children}</AuthContext.Provider>;
 }
