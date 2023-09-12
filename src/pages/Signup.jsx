@@ -51,7 +51,7 @@ const Signup = () => {
         ></img>
 
         <div className="flex justify-center items-center h-full">
-          <form className="max-w-[400px] w-full mx-auto border p-8">
+          <form className="max-w-[400px] w-full mx-auto border my-10 p-8">
             <BiArrowBack onClick={goBack} className="text-white cursor-pointer text-[20px]" />
             <h2 className="text-4xl font-bold text-center py-8 text-white">Sushi Muchi Sign Up</h2>
             <div className="flex flex-col mb-4">

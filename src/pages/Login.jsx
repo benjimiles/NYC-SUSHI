@@ -56,7 +56,7 @@ const Login = () => {
           {isLoggedIn ? (
             <p className="text-4xl font-bold text-center py-8 text-white">You're already logged in.</p>
           ) : (
-            <form onSubmit={handleSubmit} className="max-w-[400px] w-full mx-auto p-8 border">
+            <form onSubmit={handleSubmit} className="max-w-[400px] w-full h-full mx-auto my-10 p-8 border">
               <h2 className="text-4xl font-bold text-center py-8 text-white">Sushi Muchi Login</h2>
               <div className="flex flex-col mb-4">
                 <label className="mb-2 text-white">Username:</label>

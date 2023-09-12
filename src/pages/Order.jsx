@@ -15,8 +15,8 @@ const Order = () => {
         ></img>
 
         <div className="w-full h-[20%] text-center flex flex-col items-center justify-center text-white">
-          <div className="text-8xl">Our Menu</div>
-          <p className="pt-5 text-2xl">
+          <div className="text-8xl lg:text-4xl">Our Menu</div>
+          <p className="pt-5 text-xl">
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.
           </p>
         </div>
@@ -31,7 +31,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://norecipes.com/wp-content/uploads/2012/07/california-roll-012.jpg"
               alt="/"
             ></img>
@@ -46,7 +46,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://mysushikitchen.com/wp-content/uploads/2021/10/Rainbow-Roll.jpg"
               alt="/"
             ></img>
@@ -61,7 +61,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/bqynrcpd/51cc88b2-57da-419f-accb-2c4883d53e25.JPG"
               alt="/"
             ></img>
@@ -76,7 +76,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://www.manusmenu.com/wp-content/uploads/2016/05/1-Salmon-Sashimi-with-Ponzu-3-1-of-1.jpg"
               alt="/"
             ></img>
@@ -91,7 +91,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://honest-food.net/wp-content/uploads/2022/08/hamachi-sashimi-recipe.jpg"
               alt="/"
             ></img>
@@ -106,7 +106,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://onefork.nyc/uploads/foods/6704.jpg?t=1694235216"
               alt="/"
             ></img>
@@ -120,7 +120,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://dinkoseafoods.com.au/wp-content/uploads/2021/05/Dinko-Tuna-Simple-Bluefin-Tuna-Sashimi.jpg"
               alt="/"
             ></img>
@@ -135,7 +135,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://mysushikitchen.com/wp-content/uploads/2022/02/Spider-Roll.jpg"
               alt="/"
             ></img>
@@ -150,7 +150,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://eatthisct.com/wp-content/uploads/2021/02/Eel-avocado-roll-Ginza-1.jpg"
               alt="/"
             ></img>
@@ -165,7 +165,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://rusticfamilyrecipes.com/wp-content/uploads/2022/09/Alaska-roll-21_1.jpg"
               alt="/"
             ></img>
@@ -180,7 +180,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://www.carolinescooking.com/wp-content/uploads/2020/10/Japanese-recipes-square.jpg"
               alt="/"
             ></img>
@@ -195,7 +195,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://www.rachelphipps.com/wp-content/uploads/2020/12/Spicy-Tinned-Tuna-Rolls.jpg"
               alt="/"
             ></img>
@@ -209,7 +209,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://norecipes.com/wp-content/uploads/2022/02/shrimp-tempura-roll-004.jpg"
               alt="/"
             ></img>
@@ -224,7 +224,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://ocwildseafood.com/cdn/shop/articles/Ahi_Tuna_Sashimi_Seafood_Recipe_1024x.jpg?v=1591853624"
               alt="/"
             ></img>
@@ -239,7 +239,7 @@ const Order = () => {
               </button>
             </div>
             <img
-              className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+              className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://www.sushi-pedia.com/static/59cc5443d7eaaf02d61bff50a2597469/91adb/ikura-salmon-roe-sushi-opener.jpg"
               alt="/"
             ></img>
