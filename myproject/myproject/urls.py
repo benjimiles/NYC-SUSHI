@@ -18,8 +18,8 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from myapp import views
 from rest_framework.decorators import api_view
-from myapp.views import Authenticate, Signup, CustomUserViewSet
-
+from myapp.views import Authenticate, Signup, CustomUserViewSet, get_food_items
+from django.contrib import admin
 
 router = DefaultRouter()
 router.register(r"users", views.CustomUserViewSet)
@@ -28,4 +28,6 @@ urlpatterns = [
     path("", include(router.urls)),
     path("authenticate/", Authenticate.as_view(), name="authenticate"),
     path("signup/", Signup.as_view(), name="signup"),
+    path("food-items/", get_food_items, name="food-items"),
+    path("admin/", admin.site.urls),
 ]

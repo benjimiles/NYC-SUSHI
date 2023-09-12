@@ -9,6 +9,7 @@ import { useAuth } from '@/AuthContext';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useAuth();
   const router = useRouter(); // Initialize useRouter hook
   // Check if user is already logged in
@@ -37,6 +38,7 @@ const Login = () => {
         console.log('Token:', data.token);
       } else {
         // Authentication failed
+        setErrorMessage(data.error || "Authentication failed.");
         console.log('Error:', data.error);
       }
     } catch (error) {
@@ -78,6 +80,8 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
               </div>
+            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+
               <button className="w-full py-3 mt-8 hover:bg-black duration-300 border relative text-white hover:text-white cursor-pointer">
                 Sign in
               </button>
