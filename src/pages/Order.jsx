@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
 import Footer from '../components/Footer';
 
 const Order = () => {
+  const [foodItems, setFoodItems] = useState([]);
+  // Fetch Food Items from Django API
+  useEffect(() => {
+    fetch('http://localhost:8000/food-items/')
+      .then(response => response.json())
+      .then(data => setFoodItems(data.items))
+
+      .catch(error => console.error('Error fetching food items:', error));
+  }, []);
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full h-screen top-[10px] bg-zinc-800/80">
+      <div className="flex-1 w-full bg-zinc-800/80 relative">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           className="w-full h-full object-fill absolute -z-10"
@@ -20,16 +29,25 @@ const Order = () => {
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.
           </p>
         </div>
-
         <div className="max-w-full mx-auto px-40 py-100 grid md:grid-cols-5 gap-10">
-          <div className="drop-shadow-2xl relative">
-            <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
-              <p className="font-bold text-2xl px-2 pt-10">California roll</p>
-              <p className="font-bold text-[15px] px-2">Price: $2.50</p>
-              <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
-                Place Order
-              </button>
+          {foodItems.map(item => (
+            <div className="drop-shadow-2xl relative" key={item.id}>
+              <div className="absolute border-solid border-2 border-white-500 bg-black/40 h-full rounded text-white text-center w-full">
+                <p className="font-bold text-2xl px-2 pt-10">{item.name}</p>
+                <p className="font-bold text-[15px] px-2">
+                  Price: ${Number(item.price).toFixed(2)}
+                </p>
+                <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2 mt-5">
+                  Place Order
+                </button>
+              </div>
+              <img
+                className="max-h-[160px] md:max-h-[200px] w-full object-cover rounded"
+                src={item.image_url}
+                alt={item.name}
+              ></img>
             </div>
+<<<<<<< HEAD
             <img
               className="max-h-[160px] md:max-h-[200px] w-full h-full object-cover rounded"
               src="https://norecipes.com/wp-content/uploads/2012/07/california-roll-012.jpg"
@@ -244,6 +262,9 @@ const Order = () => {
               alt="/"
             ></img>
           </div>
+=======
+          ))}
+>>>>>>> 2c31d9e (Added Admin page and functionality to the backend. Updated the Order page to fetch data from the backend.)
         </div>
       </div>
       <Footer />

@@ -1,7 +1,7 @@
 # Importing necessary modules
 from rest_framework.views import APIView
 from rest_framework import viewsets
-from .serializers import CustomUserSerializer
+from .serializers import CustomUserSerializer, FoodItemSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.hashers import check_password, make_password
@@ -84,3 +84,54 @@ class CustomUserViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
 
+class FoodItemAPI(APIView):
+
+
+    def post(self, request):
+        data = request.data.copy()
+        if not data.get('image_url'):
+            data['image_url'] = 'https://norecipes.com/wp-content/uploads/2012/07/california-roll-012.jpg'
+        serializer = FoodItemSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+    def get(self, request, pk=None):
+        if pk:
+            try:
+                item = FoodItem.objects.get(pk=pk)
+                serializer = FoodItemSerializer(item)
+                return Response(serializer.data)
+            except FoodItem.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
+        else:
+            items = FoodItem.objects.all()
+            serializer = FoodItemSerializer(items, many=True)
+            return Response({'items': serializer.data})
+
+    def put(self, request, pk=None):
+        if pk:
+            try:
+                item = FoodItem.objects.get(pk=pk)
+                data = request.data.copy()
+                if not data.get('image_url'):
+                    data['image_url'] = 'https://norecipes.com/wp-content/uploads/2012/07/california-roll-012.jpg'
+                serializer = FoodItemSerializer(item, data=data)
+                if serializer.is_valid():
+                    serializer.save()
+                    return Response(serializer.data)
+                return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            except FoodItem.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
+
+
+    def delete(self, request, pk=None):
+        if pk:
+            try:
+                item = FoodItem.objects.get(pk=pk)
+                item.delete()
+                return Response(status=status.HTTP_204_NO_CONTENT)
+            except FoodItem.DoesNotExist:
+                return Response(status=status.HTTP_404_NOT_FOUND)
