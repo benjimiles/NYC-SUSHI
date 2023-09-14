@@ -29,8 +29,8 @@ const NavBar = () => {
                     <ul className="font-bold flex items-center text-xl text-white">
                         <li className="cursor-pointer mx-4"><Link href="/About">About</Link></li>
                         <li className="cursor-pointer mx-4"><Link href="/Order">Order</Link></li>
-                        <li className="cursor-pointer mx-4"><Link href="/Specials">Specials</Link></li>
                         <li className="cursor-pointer mx-4"><Link href="/Contact">Contact</Link></li>
+                        <li className="cursor-pointer mx-4"><Link href="/Checkout">Checkout</Link></li>
                         {isLoggedIn ? (
                             <button className="cursor-pointer mx-4" onClick={handleLogout}>
                                 Logout
@@ -50,8 +50,8 @@ const NavBar = () => {
             <ul className="font-bold items-center text-xl text-white my-10">
                 <li className="cursor-pointer my-10"><Link href="/About">About</Link></li>
                 <li className="cursor-pointer mb-10"><Link href="/Order">Order</Link></li>
-                <li className="cursor-pointer mb-10"><Link href="/Specials">Specials</Link></li>
                 <li className="cursor-pointer mb-10"><Link href="/Contact">Contact</Link></li>
+                <li className="cursor-pointer mb-10"><Link href="/Checkout">Checkout</Link></li>
                 <button className="cursor-pointer mb-10"><Link href="/Login">Login</Link></button>
             </ul>
         </div>

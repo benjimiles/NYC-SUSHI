@@ -15,7 +15,7 @@ const FAQ = () => {
         ></img>
 
         <div className="w-full h-[90%] text-center flex flex-col items-center justify-center px-4 text-white">
-          <h1 className="font-bold text-2xl underline">Sushi Muchi</h1>
+          <h1 className="font-bold text-2xl underline">NYC Sushi</h1>
           <h1 className="text-[25px] mt-12 text-white">
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire
           </h1>

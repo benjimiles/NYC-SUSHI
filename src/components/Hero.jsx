@@ -13,7 +13,7 @@ const Hero = () => {
             <p className="text-[20px] my-5 font-bold">Embark on a Journey of Flavor.</p>
             <p className="mb-5 font-bold">Satisfy Your Cravings Now</p>
             <div className="text-white">
-                <button className="px-6 py-2 hover:bg-black duration-300 border"><Link href="/Order">Order</Link></button>
+                <button className="px-6 py-2 hover:bg-black duration-300 border"><Link href="/Specials">Get Specials</Link></button>
                 <button className="px-6 py-2 hover:bg-black duration-300 ml-6 border"><Link href="/FAQ">FAQ</Link></button>
             </div>
         </div>
