@@ -16,7 +16,7 @@ const Contact = () => {
         ></img>
 
         <div className="w-full h-[90%] text-center flex flex-col items-center justify-center px-4 text-white">
-          <h1 className="font-bold text-2xl underline">Contact Sushi Muchi:</h1>
+          <h1 className="font-bold text-2xl underline">Contact NYC Sushi:</h1>
           <h1 className="text-[25px] mt-12 text-white">Fax: 111-222-3333</h1>
           <h1 className="text-[25px] mt-4 text-white">Phone: 111-222-3333</h1>
         </div>

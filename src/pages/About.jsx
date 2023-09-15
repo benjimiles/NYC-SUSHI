@@ -6,9 +6,9 @@ import Footer from '../components/Footer';
 
 const About = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full h-full top-[90%] bg-zinc-900/70">
+      <div className="w-full flex-1 bg-zinc-900/70">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           className="w-full h-full object-cover absolute top-0 left-0 -z-10"

@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../components/NavBar';
 import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
+import Footer from '../components/Footer';
 
 const Delivery = () => {
   return (
@@ -28,6 +29,7 @@ const Delivery = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

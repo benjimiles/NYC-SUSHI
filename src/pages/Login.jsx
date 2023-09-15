@@ -47,9 +47,9 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full h-full top-[90px] bg-zinc-900/70">
+      <div className="w-full flex-1 bg-zinc-900/70">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           className="w-full h-full object-cover absolute -z-10"
@@ -82,7 +82,7 @@ const Login = () => {
               </div>
             {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
-              <button className="w-full py-3 mt-8 hover:bg-black duration-300 border relative text-white hover:text-white cursor-pointer">
+              <button className="w-full py-3 mt-8 hover:bg-black duration-300 border text-white hover:text-white cursor-pointer">
                 Sign in
               </button>
               <p className="text-white">

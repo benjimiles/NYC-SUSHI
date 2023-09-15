@@ -17,14 +17,14 @@ const Order = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="flex-1 w-full bg-zinc-800/80 relative">
+      <div className="flex-1 w-full bg-zinc-800/70 relative">
         <img
           src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
           className="w-full h-full object-fill absolute -z-10"
         ></img>
 
         <div className="w-full h-[20%] text-center flex flex-col items-center justify-center text-white">
-          <div className="text-8xl lg:text-4xl">Our Menu</div>
+          <div className="text-6xl lg:text-4xl mt-4">Our Menu</div>
           <p className="pt-5 text-xl">
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.
           </p>
