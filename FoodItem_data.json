@@ -1,0 +1,110 @@
+[
+    {
+        "model": "myapp.fooditem",
+        "pk": 17,
+        "fields": {
+            "name": "California roll",
+            "price": "2.50",
+            "image_url": "https://norecipes.com/wp-content/uploads/2012/07/california-roll-012.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 18,
+        "fields": {
+            "name": "rainbow roll",
+            "price": "3.50",
+            "image_url": "https://mysushikitchen.com/wp-content/uploads/2021/10/Rainbow-Roll.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 19,
+        "fields": {
+            "name": "dragon roll",
+            "price": "4.00",
+            "image_url": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/bqynrcpd/51cc88b2-57da-419f-accb-2c4883d53e25.JPG"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 20,
+        "fields": {
+            "name": "Salmon Sashimi",
+            "price": "2.00",
+            "image_url": "https://www.manusmenu.com/wp-content/uploads/2016/05/1-Salmon-Sashimi-with-Ponzu-3-1-of-1.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 21,
+        "fields": {
+            "name": "YellowTail Sashimi",
+            "price": "2.00",
+            "image_url": "https://honest-food.net/wp-content/uploads/2022/08/hamachi-sashimi-recipe.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 22,
+        "fields": {
+            "name": "White Tuna Sashimi",
+            "price": "2.00",
+            "image_url": "https://onefork.nyc/uploads/foods/6704.jpg?t=1694235216"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 23,
+        "fields": {
+            "name": "Red Tuna sashimi",
+            "price": "2.00",
+            "image_url": "https://dinkoseafoods.com.au/wp-content/uploads/2021/05/Dinko-Tuna-Simple-Bluefin-Tuna-Sashimi.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 24,
+        "fields": {
+            "name": "Spider Roll",
+            "price": "5.00",
+            "image_url": "https://mysushikitchen.com/wp-content/uploads/2022/02/Spider-Roll.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 25,
+        "fields": {
+            "name": "Eel avocado roll",
+            "price": "4.50",
+            "image_url": "https://eatthisct.com/wp-content/uploads/2021/02/Eel-avocado-roll-Ginza-1.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 26,
+        "fields": {
+            "name": "Alaska Roll",
+            "price": "4.00",
+            "image_url": "https://rusticfamilyrecipes.com/wp-content/uploads/2022/09/Alaska-roll-21_1.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 27,
+        "fields": {
+            "name": "Tuna Tataki sashimi",
+            "price": "2.50",
+            "image_url": "https://www.carolinescooking.com/wp-content/uploads/2020/10/Japanese-recipes-square.jpg"
+        }
+    },
+    {
+        "model": "myapp.fooditem",
+        "pk": 28,
+        "fields": {
+            "name": "Spicy Tuna Roll",
+            "price": "4.75",
+            "image_url": "https://www.rachelphipps.com/wp-content/uploads/2020/12/Spicy-Tinned-Tuna-Rolls.jpg"
+        }
+    }
+]
