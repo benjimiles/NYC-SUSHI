@@ -35,4 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 #python env
-myproject/.env
+myproject/myenv
+*.env*
