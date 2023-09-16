@@ -20,19 +20,19 @@ const Contact = () => {
             <label className="text-2xl" htmlFor="">
               Name:
             </label>
-            <input className="" type="text" name="" id="" />
+            <input className="text-black" type="text" name="" id="" />
             <label className="text-2xl" htmlFor="">
               Email:
             </label>
-            <input className="" type="email" name="" id="" />
+            <input className="text-black" type="email" name="" id="" />
             <label className="text-2xl" htmlFor="">
               Phone Number:
             </label>
-            <input className="" type="email" name="" id="" />
+            <input className="text-black" type="email" name="" id="" />
             <label className="text-2xl" htmlFor="">
               Message:
             </label>
-            <textarea className="" name="" id=""></textarea>
+            <textarea className="text-black" name="" id=""></textarea>
             <button className="bg-black mt-5 p-1 text-xl rounded-lg border-2 border-white">Submit</button>
           </div>
           <div className="text-[25px] text-left mt-4 text-white">
