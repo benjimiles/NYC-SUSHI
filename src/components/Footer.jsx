@@ -26,7 +26,6 @@ const Hero = () => {
             <li>Post Code: 09548-9288</li>
           </ul>
         </div>
-
         <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
           <ul class="">
             <li>
@@ -59,7 +58,7 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-        <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
+        <div class="w-full  md:w-1/7 sm:mx-auto sm:text-center">
           <ul class="">
             <li>
               <a href="/Menu">Menu</a>
