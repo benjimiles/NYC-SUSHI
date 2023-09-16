@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className="w-[100%] h-[20%] text-center flex flex-col items-center justify-center text-white bg-black p-5">
-      <div className="flex">
+    <div className="w-[100%] h-[20%]  flex flex-col  text-white bg-black p-5">
+      <div className="flex text-center items-center m-auto">
         <div>
           <h1 className="font-bold text-3xl">New York City Sushi</h1>
           <p>Open From 8AM-6PM Monday-Friday</p>
@@ -15,8 +15,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div class="py-5 flex flex-wrap">
-        <div class="w-full md:w-2/6 md:flex sm:mx-auto sm:text-center">
+      <div class="py-5 flex mx-80">
+        <div class="w-full md:w-2/7 md:flex sm:mx-auto sm:text-center">
           <ul class="text-left">
             <li>Building Number: 74025</li>
             <li>Street Name: Walsh Throughway</li>
@@ -27,8 +27,8 @@ const Hero = () => {
           </ul>
         </div>
 
-        <div class="w-full md:w-1/6 sm:mx-auto sm:text-center">
-          <ul class="ml-4">
+        <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
+          <ul class="">
             <li>
               <a href="/Menu">Menu</a>
             </li>
@@ -43,8 +43,8 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-        <div class="w-full md:w-1/6 sm:mx-auto sm:text-center">
-          <ul class="ml-4">
+        <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
+          <ul class="">
             <li>
               <a href="/Menu">Menu</a>
             </li>
@@ -59,8 +59,8 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-        <div class="w-full md:w-1/6 sm:mx-auto sm:text-center">
-          <ul class="ml-4">
+        <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
+          <ul class="">
             <li>
               <a href="/Menu">Menu</a>
             </li>
@@ -75,8 +75,8 @@ const Hero = () => {
             </li>
           </ul>
         </div>
-        <div class="w-full md:w-1/6 md:flex sm:mx-auto sm:text-center">
-          <ul class="ml-4">
+        <div class="w-full md:w-2/7 md:flex sm:mx-auto sm:text-center">
+          <ul class="text-left">
             <li>
               <p class="text-2xl">Contact Us</p>
             </li>
@@ -85,8 +85,9 @@ const Hero = () => {
           </ul>
         </div>
       </div>
-
-      <p>Copyright &copy; 2023. Website made with ♥ </p>
+      <div>
+        <p className="text-center">Copyright &copy; 2023. Website made with ♥ </p>
+      </div>
     </div>
   );
 };
