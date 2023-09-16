@@ -38,4 +38,7 @@ next-env.d.ts
 myproject/myenv
 *.env*
 *.pyc
-myproject/myapp/__pycache__
+/myproject/myapp/__pycache__
+/myproject/__pycache__
+/myproject/myproject/__pycache__
+
