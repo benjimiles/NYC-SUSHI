@@ -106,6 +106,7 @@ const AdminDashboard = () => {
       <NavBar />
 
       <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white bg-black">
+        
         <h1>Admin Dashboard</h1>
         <h2>Food Items</h2>
         <button onClick={toggleNewItemFields} className="my-2">New Item</button>
