@@ -16,7 +16,8 @@ const Contact = () => {
         ></img>
         <h1 className="font-bold text-6xl pt-10 text-center text-white">Reach out to us!</h1>
         <div className="w-full h-[80%] text-center flex items-center justify-center px-4 text-white">
-          <div className="flex flex-col mr-20">
+          <form className="flex flex-col mr-20 bg-black border max-w-[400px] w-full pb-10 pl-10 pr-10 rounded-xl">
+            <p className="text-4xl pt-5">Contact Us</p>
             <label className="text-2xl" htmlFor="">
               Name:
             </label>
@@ -34,7 +35,7 @@ const Contact = () => {
             </label>
             <textarea className="text-black" name="" id=""></textarea>
             <button className="bg-black mt-5 p-1 text-xl rounded-lg border-2 border-white">Submit</button>
-          </div>
+          </form>
           <div className="text-[25px] text-left mt-4 text-white">
             <h2>Contact Details:</h2>
             <p className="text-[25px] mt-4 text-white">Phone: 111-222-3333</p>
