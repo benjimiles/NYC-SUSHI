@@ -9,7 +9,7 @@ import { useAuth } from '@/AuthContext';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useAuth();
   const router = useRouter(); // Initialize useRouter hook
   // Check if user is already logged in
@@ -38,7 +38,7 @@ const Login = () => {
         console.log('Token:', data.token);
       } else {
         // Authentication failed
-        setErrorMessage(data.error || "Authentication failed.");
+        setErrorMessage(data.error || 'Authentication failed.');
         console.log('Error:', data.error);
       }
     } catch (error) {
@@ -58,12 +58,15 @@ const Login = () => {
           {isLoggedIn ? (
             <p className="text-4xl font-bold text-center py-8 text-white">You're already logged in.</p>
           ) : (
-            <form onSubmit={handleSubmit} className="max-w-[400px] w-full h-full mx-auto my-10 p-8 border">
-              <h2 className="text-4xl font-bold text-center py-8 text-white">Sushi Muchi Login</h2>
+            <form
+              onSubmit={handleSubmit}
+              className="max-w-[400px] w-full h-full my-10 p-8 border-2 rounded-2xl bg-white/70 text-black"
+            >
+              <h2 className="text-4xl font-bold text-center pb-5">Client Login</h2>
               <div className="flex flex-col mb-4">
-                <label className="mb-2 text-white">Username:</label>
+                <label className="font-bold">Username:</label>
                 <input
-                  className="border bg-gray-100 p-2"
+                  className="border-2 border-gray-400 bg-white p-3 rounded-xl"
                   type="text"
                   placeholder="Username"
                   value={username}
@@ -71,25 +74,25 @@ const Login = () => {
                 ></input>
               </div>
               <div className="flex flex-col">
-                <label className="mb-2 text-white">Password:</label>
+                <label className="font-bold">Password:</label>
                 <input
-                  className="border bg-gray-100 p-2"
+                  className="border-2 border-gray-400 bg-white p-3 rounded-xl"
                   type="password"
                   placeholder="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 ></input>
               </div>
-            {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+              {errorMessage && <p className="text-red-500">{errorMessage}</p>}
 
-              <button className="w-full py-3 mt-8 hover:bg-black duration-300 border text-white hover:text-white cursor-pointer">
+              <button className="w-full py-3 mb-2 mt-8 hover:bg-black duration-300 border-2 border-white text-black font-bold hover:text-white cursor-pointer rounded-xl bg-white/70">
                 Sign in
               </button>
-              <p className="text-white">
-                <input className="mr-2" type="checkbox"></input>Remember this account
+              <p className="text-black text-left pb-5">
+                <input className="mr-1.5" type="checkbox"></input>Remember this account
               </p>
-              <p className="text-white">
-                <span className="text-blue-500 cursor-pointer">
+              <p className="text-black text-center">
+                <span className="text-blue-700 font-bold cursor-pointer">
                   <Link href="/Signup">Sign up</Link>
                 </span>{' '}
                 to become a member
