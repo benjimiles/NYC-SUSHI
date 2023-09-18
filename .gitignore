@@ -35,10 +35,10 @@ yarn-error.log*
 next-env.d.ts
 
 #python env
-myproject/myenv
+Backend/myenv
 *.env*
 *.pyc
-/myproject/myapp/__pycache__
-/myproject/__pycache__
-/myproject/myproject/__pycache__
+/Backend/myapp/__pycache__
+/Backend/__pycache__
+/Backend/myproject/__pycache__
 

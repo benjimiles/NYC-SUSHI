@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
@@ -6,6 +5,7 @@ import { useAuth } from '@/AuthContext';
 const NavBar = () => {
   const [nav, setNav] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useAuth();
+  const [userAvatarURL, setUserAvatarURL] = useState(null);
   const setState = () => {
     setNav(!nav);
   };
@@ -14,8 +14,34 @@ const NavBar = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
   };
+  
+  useEffect(() => {
+    const fetchAvatar = async () => {
+      console.log("Token from LocalStorage: ", localStorage.getItem('token'));
 
-  useEffect(() => {}, [isLoggedIn]);
+
+      if (isLoggedIn) {
+        try {
+          const res = await fetch('http://localhost:8000/users/me/', {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`,  // Change this to what your API expects
+            },
+          });
+  
+          if (res.ok) {
+            const data = await res.json();
+            setUserAvatarURL(`http://localhost:8000${data.avatar}`);  // Make sure 'avatarURL' is correct
+          } else {
+            console.error('Failed to fetch avatar, status:', res.status);
+          }
+        } catch (error) {
+          console.error('An error occurred:', error);
+        }
+      }
+    };
+  
+    fetchAvatar();
+  }, [isLoggedIn]);
 
   return (
     <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10">
@@ -42,26 +68,32 @@ const NavBar = () => {
             </li>
             {isLoggedIn ? (
               <button className="cursor-pointer mx-4" onClick={handleLogout}>
-                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                  <svg
-                    class="absolute w-12 h-12 text-gray-400 -left-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
+                <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                  {userAvatarURL ? (
+              <img src={userAvatarURL} className="w-12 h-12 object-cover"/>
+
+                  ) : (
+                    <svg
+                      className="absolute w-12 h-12 text-gray-400 -left-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  )}
                 </div>
               </button>
             ) : (
               <button className="cursor-pointer mx-4">
                 <Link href="/Login">Login</Link>
               </button>
-            )}{' '}
+            )}
+            {' '}
           </ul>
         </div>
 

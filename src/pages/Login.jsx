@@ -32,10 +32,10 @@ const Login = () => {
       const data = await res.json();
       if (res.status === 200) {
         // Successfully authenticated
-        localStorage.setItem('token', data.token); // Save token to local storage
+        localStorage.setItem('token', data.access); // Save token to local storage
         setIsLoggedIn(true); // Update the state in AuthContext
         router.push('/Order'); // Navigate to another page
-        console.log('Token:', data.token);
+        console.log('Token:', data.access);
       } else {
         // Authentication failed
         setErrorMessage(data.error || 'Authentication failed.');
