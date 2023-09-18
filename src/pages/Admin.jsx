@@ -110,21 +110,21 @@ const AdminDashboard = () => {
         {showNewItemFields && (
           <div className="py-4 text-xl">
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="New Item Name"
               value={newItem.name}
               onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
             />
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="Price"
               value={newItem.price}
               onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
             />
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="Image URL"
               value={newItem.image_url}
