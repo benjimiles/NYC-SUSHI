@@ -101,7 +101,7 @@ const AdminDashboard = () => {
     <div>
       <NavBar />
 
-      <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white bg-black">
+      <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white bg-[#526D82]">
         <h1 className="text-4xl">Admin Dashboard</h1>
         <h2>Food Items</h2>
         <button onClick={toggleNewItemFields} className="my-2 p-2 text-2xl border-2 border-white rounded-xl">
