@@ -59,30 +59,30 @@ const Signup = () => {
         ></img>
 
         <div className="flex justify-center items-center h-full">
-        <form onSubmit={handleSignup} className="max-w-[400px] w-full mx-auto border my-10 p-8">
-              <BiArrowBack onClick={goBack} className="text-white relative cursor-pointer text-[20px]" />
-              <h2 className="text-4xl font-bold text-center py-8 relative text-white">Sushi Muchi Sign Up</h2>
+        <form onSubmit={handleSignup} className="max-w-[400px] w-full mx-auto bg-white/70 text-black rounded-2xl my-10 p-8">
+              <BiArrowBack onClick={goBack} className="text-black relative cursor-pointer text-[20px]" />
+              <h2 className="text-4xl font-bold text-center py-8 relative text-black">NYC Sushi Sign Up</h2>
               {isSignupSuccessful === false && (
                 <p className="text-red-500 relative mb-2">Signup failed! Please try again.</p>
               )}
               <div className="flex flex-col mb-4">
-                <label className="text-white relative mb-2">Email:</label>
-                <input className="border relative bg-gray-100 p-2" type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <label className="text-black relative mb-2">Email:</label>
+                <input className="rounded-xl border relative border-gray-400 p-2" type="text" placeholder="email" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className="flex flex-col mb-4">
-                <label className="text-white relative mb-2">Username:</label>
-                <input className="border relative bg-gray-100 p-2" type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+                <label className="text-black relative mb-2">Username:</label>
+                <input className="rounded-xl border relative border-gray-400 p-2" type="text" placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
               </div>
               {errorMessage && <p className="text-red-500 relative mb-2">{errorMessage}</p>}
               <div className="flex flex-col">
-                <label className="text-white relative mb-2">Password:</label>
-                <input className="border relative bg-gray-100 p-2" type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                <label className="text-black relative mb-2">Password:</label>
+                <input className="rounded-xl border relative border-gray-400 p-2" type="password" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
               </div>
               <div className="flex flex-col">
-                <label className="text-white relative mb-2">Confirm Password:</label>
-                <input className="border relative bg-gray-100 p-2" type="password" placeholder="confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
+                <label className="text-black relative mb-2">Confirm Password:</label>
+                <input className="rounded-xl border relative border-gray-400 p-2" type="password" placeholder="confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
               </div>
-              <button type="submit" className="w-full py-3 mt-8 hover:bg-black duration-300 border relative text-white hover:text-white cursor-pointer">
+              <button type="submit" className="w-full py-3 mt-8 hover:bg-black duration-300 border relative text-black hover:text-white cursor-pointer rounded-xl bg-white/70">
                 Sign Up
               </button>
           </form>
