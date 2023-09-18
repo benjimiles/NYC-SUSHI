@@ -101,7 +101,7 @@ const AdminDashboard = () => {
     <div>
       <NavBar />
 
-      <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white bg-black">
+      <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white bg-[#526D82]">
         <h1 className="text-4xl">Admin Dashboard</h1>
         <h2>Food Items</h2>
         <button onClick={toggleNewItemFields} className="my-2 p-2 text-2xl border-2 border-white rounded-xl">
@@ -110,21 +110,21 @@ const AdminDashboard = () => {
         {showNewItemFields && (
           <div className="py-4 text-xl">
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="New Item Name"
               value={newItem.name}
               onChange={(e) => setNewItem({ ...newItem, name: e.target.value })}
             />
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="Price"
               value={newItem.price}
               onChange={(e) => setNewItem({ ...newItem, price: e.target.value })}
             />
             <input
-              className="m-2"
+              className="m-2 text-black"
               type="text"
               placeholder="Image URL"
               value={newItem.image_url}

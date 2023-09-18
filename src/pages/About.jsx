@@ -14,8 +14,8 @@ const About = () => {
           className="w-full h-full object-cover absolute top-0 left-0 -z-10"
         ></img>
 
-        <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white">
-          <h1 className="sm:text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">About Us</h1>
+        <div className="w-full h-auto text-center md:py-4 lg:py-6 text-white">
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">About Us</h1>
 
           <p className="px-4 md:px-16 lg:px-28">
             Welcome to New York City Sushi, your ultimate destination for exquisite sushi and Japanese cuisine in the
@@ -23,7 +23,7 @@ const About = () => {
             hunger, but about creating a memorable experience that tantalizes your taste buds and elevates your senses.
           </p>
 
-          <h1 className="text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
 
           <p className="px-4 md:px-16 lg:px-32">
             Established in 2023, New York City Sushi has been a beloved part of the New York dining scene. Our journey
@@ -32,7 +32,7 @@ const About = () => {
             balance of flavors in each dish.
           </p>
 
-          <h1 className="text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
             Culinary Excellence
           </h1>
 
@@ -43,7 +43,7 @@ const About = () => {
             innovative signature rolls, each dish is a celebration of Japanese culinary traditions with a modern twist.
           </p>
 
-          <h1 className="text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
             Aesthetic Ambiance
           </h1>
 
@@ -54,7 +54,7 @@ const About = () => {
             family.
           </p>
 
-          <h1 className="text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
             Commitment to Sustainability
           </h1>
 
@@ -64,7 +64,7 @@ const About = () => {
             eco-friendly packaging, and minimizing food waste wherever possible.
           </p>
 
-          <h1 className="text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
+          <h1 className="text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
 
           <p className="px-4 md:px-16 lg:px-32">
             Our mission is simple: to create an unforgettable culinary journey for every guest who walks through our

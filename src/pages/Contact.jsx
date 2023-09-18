@@ -34,7 +34,7 @@ const Contact = () => {
               Message:
             </label>
             <textarea className="text-black" name="" id=""></textarea>
-            <button className="bg-black mt-5 p-1 text-xl rounded-lg border-2 border-white">Submit</button>
+            <button className="bg-black mt-5 p-1 text-xl rounded-lg border-2 border-white hover:bg-white hover:text-black duration-300">Submit</button>
           </form>
           <div className="text-[25px] text-left mt-4 text-white">
             <h2>Contact Details:</h2>
