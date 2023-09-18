@@ -1,7 +1,7 @@
 # Importing necessary modules
 from rest_framework.views import APIView
-from rest_framework import viewsets
-from .serializers import CustomUserSerializer, FoodItemSerializer
+from rest_framework import viewsets, status
+from .serializers import CustomUserSerializer, FoodItemSerializer, AvatarUploadSerializer
 from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.hashers import check_password, make_password
@@ -10,12 +10,39 @@ from decouple import config
 from django.http import JsonResponse
 import jwt
 import datetime
-from rest_framework.decorators import api_view
-
+from rest_framework.decorators import api_view,action,permission_classes
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework.permissions import IsAuthenticated
 @api_view(['GET'])
 def get_food_items(request):
     items = list(FoodItem.objects.values())
     return JsonResponse({'items': items})
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def upload_avatar(request):
+    if request.method == 'POST':
+        user = request.user
+        updated_data = request.data.copy()
+        
+        # If a new name is provided, update it
+        if 'name' in updated_data:
+            updated_data['name'] = updated_data['name']
+        else:
+            updated_data['name'] = user.name  # Default to the current name
+
+        # If an avatar is provided, it will be included in updated_data by default
+
+        # Initialize the serializer with the current user instance
+        file_serializer = AvatarUploadSerializer(user, data=updated_data)
+        
+        # Validate and save the serializer
+        if file_serializer.is_valid():
+            file_serializer.save()
+            return Response(file_serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 # Fetching JWT Secret Key from environment
@@ -25,32 +52,26 @@ SECRET_KEY = config("JWT_SECRET_KEY")
 class Authenticate(APIView):
 
     def post(self, request):
-        # Extract username and password from the request payload
         username = request.data.get("username")
         password = request.data.get("password")
-
-        # Try fetching the user
+        
         try:
             user = CustomUser.objects.get(username=username)
         except CustomUser.DoesNotExist:
-            # Return 401 if user does not exist
             return Response({"error": "Invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
 
-        # Validate the password
+        # ... in your Authenticate class
         if check_password(password, user.password):
-            # Create JWT payload and token
-            payload = {
-                "user_id": user.id,
-                "exp": datetime.datetime.utcnow() + datetime.timedelta(days=1),
-                "iat": datetime.datetime.utcnow(),
-                "isAdmin": user.is_staff  # Or use any field that you have defined for admin status
-            }
-            token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+            refresh = RefreshToken.for_user(user)
+            print(f"Refresh Token: {str(refresh)}")  # Debug line
+            print(f"Access Token: {str(refresh.access_token)}")  # Debug line
+            return Response({
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+            })
 
-            return Response({"token": token}, status=status.HTTP_200_OK)
         else:
             return Response({"error": "Invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
-
 
 # Define API view for user signup
 class Signup(APIView):
@@ -80,9 +101,18 @@ class Signup(APIView):
             return Response({"message": "User created successfully"}, status=status.HTTP_201_CREATED)
 
 # Define API viewset for CustomUser model
+
 class CustomUserViewSet(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
     serializer_class = CustomUserSerializer
+    @action(detail=False, methods=['GET'])
+    def me(self, request):
+        user = request.user
+        if user.is_authenticated:
+            serializer = CustomUserSerializer(user)
+            return Response(serializer.data)
+        else:
+            return Response({"detail": "Not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
 
 class FoodItemAPI(APIView):
 
