@@ -52,18 +52,13 @@ const Signup = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full flex-1 bg-zinc-900/70">
-        <img
-          src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          className="w-full h-full object-cover absolute -z-10"
-        ></img>
-
+      <div className="w-full flex-1 bg-[#526D82]">
         <div className="flex justify-center items-center h-full">
         <form onSubmit={handleSignup} className="max-w-[400px] w-full mx-auto bg-white/70 text-black rounded-2xl my-10 p-8">
               <BiArrowBack onClick={goBack} className="text-black relative cursor-pointer text-[20px]" />
               <h2 className="text-4xl font-bold text-center py-8 relative text-black">NYC Sushi Sign Up</h2>
               {isSignupSuccessful === false && (
-                <p className="text-red-500 relative mb-2">Signup failed! Please try again.</p>
+                <p className="text-red-500 relative mb-2">You already have an account! Please try again.</p>
               )}
               <div className="flex flex-col mb-4">
                 <label className="text-black relative mb-2">Email:</label>
