@@ -10,41 +10,33 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useAuth();
+  const {isLoggedIn, loginUser} = useAuth();
   const router = useRouter(); // Initialize useRouter hook
   // Check if user is already logged in
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsLoggedIn(true);
+ 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch('http://localhost:8000/authenticate/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
+    const data = await res.json();
+    if (res.status === 200) {
+      loginUser(data.access);  // Call the loginUser method from your AuthContext
+      router.push('/Order');  // Navigate to another page
+      console.log('Token:', data.access);
+    } else {
+      setErrorMessage(data.error || 'Authentication failed.');
+      console.log('Error:', data.error);
     }
-  }, []);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await fetch('http://localhost:8000/authenticate/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password }),
-      });
-      const data = await res.json();
-      if (res.status === 200) {
-        // Successfully authenticated
-        localStorage.setItem('token', data.access); // Save token to local storage
-        setIsLoggedIn(true); // Update the state in AuthContext
-        router.push('/Order'); // Navigate to another page
-        console.log('Token:', data.access);
-      } else {
-        // Authentication failed
-        setErrorMessage(data.error || 'Authentication failed.');
-        console.log('Error:', data.error);
-      }
-    } catch (error) {
-      console.error('An error occurred:', error);
-    }
-  };
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+};
 
   return (
     <div className="flex flex-col min-h-screen">

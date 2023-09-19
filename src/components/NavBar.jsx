@@ -4,45 +4,20 @@ import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { useAuth } from '@/AuthContext';
 const NavBar = () => {
   const [nav, setNav] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useAuth();
+  const { isLoggedIn, setIsLoggedIn, userData } = useAuth();
   const [userAvatarURL, setUserAvatarURL] = useState(null);
   const setState = () => {
     setNav(!nav);
   };
-
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
   };
-  
   useEffect(() => {
-    const fetchAvatar = async () => {
-      console.log("Token from LocalStorage: ", localStorage.getItem('token'));
-
-
-      if (isLoggedIn) {
-        try {
-          const res = await fetch('http://localhost:8000/users/me/', {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem('token')}`,  // Change this to what your API expects
-            },
-          });
-  
-          if (res.ok) {
-            const data = await res.json();
-            setUserAvatarURL(`http://localhost:8000${data.avatar}`);  // Make sure 'avatarURL' is correct
-          } else {
-            console.error('Failed to fetch avatar, status:', res.status);
-          }
-        } catch (error) {
-          console.error('An error occurred:', error);
-        }
-      }
-    };
-  
-    fetchAvatar();
-  }, [isLoggedIn]);
-
+    if (userData && userData.avatar) {
+      setUserAvatarURL(`http://localhost:8000${userData.avatar}`);
+    }
+  }, [userData, userAvatarURL]);
   return (
     <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10">
       <div className="flex max-w-[1400px] h-full mx-auto px-4 items-center justify-between">
@@ -70,7 +45,7 @@ const NavBar = () => {
               <button className="cursor-pointer mx-4" onClick={handleLogout}>
                 <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
                   {userAvatarURL ? (
-              <img src={userAvatarURL} className="w-12 h-12 object-cover"/>
+                    <img src={userAvatarURL} className="w-12 h-12 object-cover" />
 
                   ) : (
                     <svg

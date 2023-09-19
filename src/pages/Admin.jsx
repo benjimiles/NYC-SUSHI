@@ -4,7 +4,9 @@ import { useRouter } from 'next/router';
 import jwt_decode from 'jwt-decode';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import { useAuth } from '@/AuthContext';
 const AdminDashboard = () => {
+  const {userData} = useAuth();
   const [foodItems, setFoodItems] = useState([]);
   const router = useRouter();
   const [newItem, setNewItem] = useState({ name: '', price: '', image_url: '' });
@@ -12,14 +14,11 @@ const AdminDashboard = () => {
   const [showNewItemFields, setShowNewItemFields] = useState(false);
   const [itemErrors, setItemErrors] = useState({});
 
-  // Simulated auth check
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    const decoded = jwt_decode(token);
-    if (!decoded.isAdmin) {
+    if (userData && !userData.is_superuser) {  // Change 'isAdmin' to whatever field indicates admin status in your userData object
       router.push('/');
     }
-  }, []);
+  }, [userData]);
 
   // Fetch Food Items from Django API
   useEffect(() => {

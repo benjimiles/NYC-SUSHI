@@ -4,7 +4,7 @@ from .models import CustomUser, FoodItem
 class CustomUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ('id', 'username', 'email','avatar', 'name')  # Add more fields as needed
+        fields = ('id', 'username', 'email','avatar', 'name','is_superuser',)  # Add more fields as needed
 class FoodItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodItem
