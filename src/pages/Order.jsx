@@ -21,7 +21,7 @@ const Order = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="flex-1 w-full bg-[#9DB2BF] relative">
+      <div className="flex-1 w-full bg-[#9DB2BF]">
         <div className="w-full h-[30%] text-center flex flex-col items-center justify-center text-white">
           <div className="text-6xl text-black mt-4 font-bold">Our Menu</div>
           <p className="pt-5 text-xl">
@@ -34,7 +34,7 @@ const Order = () => {
         <div className="my-8 max-w-full h-full mx-auto px-40 py-100 grid sm:grid-cols-3 md:grid-cols-5 gap-10">
           {foodItems &&
             foodItems.map((item) => (
-              <div className="drop-shadow-lg relative" key={item.pk}>
+              <div className="drop-shadow-lg" key={item.pk}>
                 <div className="absolute border-solid border-2 border-black bg-black/40 h-full rounded-xl  text-white text-center w-full">
                   <p className="font-bold text-2xl px-2 pt-2">{item.name}</p>
                   <p className="font-bold text-[15px] px-2">Price: ${Number(item.price).toFixed(2)}</p>
