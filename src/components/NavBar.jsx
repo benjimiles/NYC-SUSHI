@@ -5,51 +5,30 @@ import { useAuth } from '@/AuthContext';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { useRouter } from 'next/router';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 const NavBar = () => {
+  const router = useRouter();
   const [nav, setNav] = useState(0);
-  const [isLoggedIn, setIsLoggedIn] = useAuth();
+  const { isLoggedIn, setIsLoggedIn, userData } = useAuth();
   const [userAvatarURL, setUserAvatarURL] = useState(null);
   const setState = () => {
     setNav(!nav);
   };
-
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+    router.push('/');
   };
-
   useEffect(() => {
-    const fetchAvatar = async () => {
-      console.log('Token from LocalStorage: ', localStorage.getItem('token'));
-
-      if (isLoggedIn) {
-        try {
-          const res = await fetch('http://localhost:8000/users/me/', {
-            headers: {
-              Authorization: `Bearer ${localStorage.getItem('token')}`, // Change this to what your API expects
-            },
-          });
-
-          if (res.ok) {
-            const data = await res.json();
-            setUserAvatarURL(`http://localhost:8000${data.avatar}`); // Make sure 'avatarURL' is correct
-          } else {
-            console.error('Failed to fetch avatar, status:', res.status);
-          }
-        } catch (error) {
-          console.error('An error occurred:', error);
-        }
-      }
-    };
-
-    fetchAvatar();
-  }, [isLoggedIn]);
-
+    if (userData && userData.avatar) {
+      setUserAvatarURL(`${userData.avatar}`);
+    }
+  }, [userData, userAvatarURL]);
   return (
     <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10">
       <div className="flex max-w-[1400px] h-full mx-auto px-4 items-center justify-between">

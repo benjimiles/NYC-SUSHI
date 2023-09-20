@@ -28,11 +28,16 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50, unique=True)
     name = models.CharField(max_length=50, default='username')
+    email = models.EmailField(unique=True, null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-    avatar = models.ImageField(upload_to=user_directory_path, null=True, blank=True)
+    avatar = models.ImageField(upload_to='your_upload_directory', null=True, blank=True)
+    address = models.CharField(max_length=100, null=True, blank=True)
+    city = models.CharField(max_length=50, null=True, blank=True)
+    state_province = models.CharField(max_length=50, null=True, blank=True)
+    zip_code = models.CharField(max_length=20, null=True, blank=True)
+    country = models.CharField(max_length=50, null=True, blank=True)
     objects = CustomUserManager()
-    email = models.EmailField(unique=True, null=True, blank=True)
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
     def save(self, *args, **kwargs):
