@@ -24,17 +24,23 @@ export function AuthProvider({ children }) {
   };
 
   useEffect(() => {
+    let currentToken = null;
+    
+    // Check if we're running on the client side
+    if (typeof window !== 'undefined') {
+      currentToken = localStorage.getItem('token');
+    }
+  
     const fetchData = async () => {
-      const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
-      if (token) {
+      if (currentToken) {
         setIsLoggedIn(true);
-
-        const res = await fetch('http://localhost:8000/users/me/', {
+  
+        const res = await fetch('http://localhost:8000/users/1/', {
           headers: {
-            Authorization: `Bearer ${token}`,
+            Authorization: `Bearer ${currentToken}`,
           },
         });
-
+  
         if (res.ok) {
           const data = await res.json();
           setUserData(data);
@@ -44,11 +50,12 @@ export function AuthProvider({ children }) {
       } else {
         setIsLoggedIn(false);
       }
-      setLoading(false);  // Set loading to false only after all operations are done
+      setLoading(false);
     };
-
+  
     fetchData();
-  }, []);  // Removing the dependency on the token
+  }, []);  // Dependency array is now empty
+  
 
   return (
     <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn, userData, setUserData, loginUser }}>

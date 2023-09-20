@@ -33,9 +33,6 @@ urlpatterns = [
     path("signup/", Signup.as_view(), name="signup"),
     path("food-items/", FoodItemAPI.as_view(), name="food-item-list-create"),
     path("food-items/<int:pk>/", FoodItemAPI.as_view(), name="food-item-detail"),
-    path("users/me/", views.CustomUserViewSet.as_view({"get": "me"}), name="user-me"),
-    path("upload_avatar/", views.upload_avatar, name="upload_avatar"),
-    path("admin/", admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
  

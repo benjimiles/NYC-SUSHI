@@ -6,7 +6,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { useAuth } from '@/AuthContext';
 const AdminDashboard = () => {
-  const {userData} = useAuth();
+  const { userData } = useAuth();
   const [foodItems, setFoodItems] = useState([]);
   const router = useRouter();
   const [newItem, setNewItem] = useState({ name: '', price: '', image_url: '' });
@@ -15,7 +15,7 @@ const AdminDashboard = () => {
   const [itemErrors, setItemErrors] = useState({});
 
   useEffect(() => {
-    if (userData && !userData.is_superuser) {  // Change 'isAdmin' to whatever field indicates admin status in your userData object
+    if (!userData || !userData.is_superuser) {  // Redirect if not logged in or not an admin
       router.push('/');
     }
   }, [userData]);

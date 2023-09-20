@@ -2,41 +2,49 @@
 from rest_framework.views import APIView
 from rest_framework import viewsets, status
 from .serializers import CustomUserSerializer, FoodItemSerializer, AvatarUploadSerializer
-from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.hashers import check_password, make_password
 from .models import CustomUser, FoodItem
 from decouple import config
 from django.http import JsonResponse
-import jwt
-import datetime
-from rest_framework.decorators import api_view,action,permission_classes
+from rest_framework.decorators import api_view,action,permission_classes, action
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
+from django.http import QueryDict
 @api_view(['GET'])
 def get_food_items(request):
     items = list(FoodItem.objects.values())
     return JsonResponse({'items': items})
 
-@api_view(['POST'])
-@permission_classes([IsAuthenticated])
-def upload_avatar(request):
-    if request.method == 'POST':
-        user = request.user
-        updated_data = request.data.copy()
-        
-        # If a new name is provided, update it
-        if 'name' in updated_data:
-            updated_data['name'] = updated_data['name']
+class CustomUserViewSet(viewsets.ModelViewSet):
+    queryset = CustomUser.objects.all()
+    serializer_class = CustomUserSerializer
+    
+
+    @action(detail=True, methods=['POST'])
+    def update_user(self, request, pk=None):
+        user = self.get_object()
+
+        mutable_data = request.data.copy()  # Make a mutable copy
+
+        if 'avatar' in mutable_data and isinstance(mutable_data['avatar'], str):
+            del mutable_data['avatar']  # Delete the avatar key if it exists and is a string
+
+        serializer = CustomUserSerializer(user, data=mutable_data, partial=True)  # Use the mutable copy
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
         else:
-            updated_data['name'] = user.name  # Default to the current name
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-        # If an avatar is provided, it will be included in updated_data by default
 
-        # Initialize the serializer with the current user instance
-        file_serializer = AvatarUploadSerializer(user, data=updated_data)
-        
-        # Validate and save the serializer
+
+    @action(detail=True, methods=['POST'])
+    def upload_avatar(self, request, pk=None):
+        user = self.get_object()
+        file_serializer = AvatarUploadSerializer(user, data=request.data)
+
         if file_serializer.is_valid():
             file_serializer.save()
             return Response(file_serializer.data, status=status.HTTP_201_CREATED)
@@ -63,8 +71,6 @@ class Authenticate(APIView):
         # ... in your Authenticate class
         if check_password(password, user.password):
             refresh = RefreshToken.for_user(user)
-            print(f"Refresh Token: {str(refresh)}")  # Debug line
-            print(f"Access Token: {str(refresh.access_token)}")  # Debug line
             return Response({
                 'refresh': str(refresh),
                 'access': str(refresh.access_token),
@@ -100,19 +106,7 @@ class Signup(APIView):
 
             return Response({"message": "User created successfully"}, status=status.HTTP_201_CREATED)
 
-# Define API viewset for CustomUser model
 
-class CustomUserViewSet(viewsets.ModelViewSet):
-    queryset = CustomUser.objects.all()
-    serializer_class = CustomUserSerializer
-    @action(detail=False, methods=['GET'])
-    def me(self, request):
-        user = request.user
-        if user.is_authenticated:
-            serializer = CustomUserSerializer(user)
-            return Response(serializer.data)
-        else:
-            return Response({"detail": "Not authenticated"}, status=status.HTTP_401_UNAUTHORIZED)
 
 class FoodItemAPI(APIView):
 

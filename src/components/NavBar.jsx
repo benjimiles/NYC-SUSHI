@@ -5,12 +5,14 @@ import { useAuth } from '@/AuthContext';
 import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { useRouter } from 'next/router';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 const NavBar = () => {
+  const router = useRouter();
   const [nav, setNav] = useState(0);
   const { isLoggedIn, setIsLoggedIn, userData } = useAuth();
   const [userAvatarURL, setUserAvatarURL] = useState(null);
@@ -20,10 +22,11 @@ const NavBar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     setIsLoggedIn(false);
+    router.push('/');
   };
   useEffect(() => {
     if (userData && userData.avatar) {
-      setUserAvatarURL(`http://localhost:8000${userData.avatar}`);
+      setUserAvatarURL(`${userData.avatar}`);
     }
   }, [userData, userAvatarURL]);
   return (
