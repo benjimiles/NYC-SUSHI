@@ -9,70 +9,68 @@ const About = () => {
     <div className="flex flex-col min-h-screen">
       <NavBar />
       <div className="w-full flex-1 bg-[#9DB2BF]">
+        <div className="w-full h-auto text-center text-black">
+          <div className="px-80 bg-gray-300 p-20">
+            <h1 className="font-bold text-6xl pb-2 md:pb-4 lg:pb-6">About Us</h1>
+          </div>
 
-        <div className="w-full h-auto text-center md:py-4 lg:py-6 text-black">
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">About Us</h1>
+          <div className="px-80 bg-gray-400 p-20">
+            <h1 className="font-bold text-3xl pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
 
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-28">
-            Welcome to New York City Sushi, your ultimate destination for exquisite sushi and Japanese cuisine in the
-            heart of New York City. At New York CIty Sushi, we believe that dining is not just about satisfying your
-            hunger, but about creating a memorable experience that tantalizes your taste buds and elevates your senses.
-          </p>
+            <p className="text-xl leading-9 px-4 md:px-16 lg:px-32">
+              Our mission is simple: to create an unforgettable culinary journey for every guest who walks through our
+              doors. Whether you're a sushi aficionado or exploring Japanese cuisine for the first time, we aim to
+              captivate your senses with every bite, leaving you with a lasting memory of flavors, textures, and
+              experiences that are uniquely New York City Sushi.
+            </p>
+          </div>
 
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
+          <div className="px-80 bg-gray-300 p-20">
+            <h1 className="font-bold text-3xl pb-2 md:pb-4 lg:pb-6">Our Story</h1>
 
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32">
-            Established in 2023, New York City Sushi has been a beloved part of the New York dining scene. Our journey
-            began with a passion for bringing the authentic flavors of Japan to the bustling streets of NYC. Over the
-            years, we've meticulously honed our craft, focusing on the art of sushi-making and perfecting the delicate
-            balance of flavors in each dish.
-          </p>
+            <p className="text-xl leading-9 pb-4">
+              Established in 2023, New York City Sushi is a cherished fixture in the city's dining scene, known for
+              authentically bringing Japanese flavors to NYC. With a focus on sushi mastery and flavor refinement, we've
+              honed our craft over the years.
+            </p>
 
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
-            Culinary Excellence
-          </h1>
+            <p className="text-xl leading-9 pb-4">
+              Led by expert chefs, we pride ourselves on creating visually stunning and delicious culinary delights. We
+              meticulously select the freshest, top-quality ingredients to ensure every plate leaving our kitchen is a
+              masterpiece, from traditional sushi to innovative signature rolls.
+            </p>
 
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32">
-            Led by our skilled team of master chefs, New York City Sushi takes pride in crafting culinary creations that
-            are as visually stunning as they are delectable. We source the freshest and highest quality ingredients to
-            ensure every plate that leaves our kitchen is a masterpiece. From traditional sushi and sashimi to
-            innovative signature rolls, each dish is a celebration of Japanese culinary traditions with a modern twist.
-          </p>
+            <p className="text-xl leading-9 pb-4">
+              Step into our elegant, inviting space designed to evoke the tranquil atmosphere of a traditional Japanese
+              dining experience. Our serene decor and minimalist design set the stage for intimate dinners,
+              celebrations, or casual gatherings with loved ones.
+            </p>
 
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
-            Aesthetic Ambiance
-          </h1>
+            <p className="text-xl leading-9 pb-4">
+              At New York City Sushi, we're not just about exceptional dining; we're also dedicated to preserving the
+              planet. We uphold sustainable sourcing, employ eco-friendly packaging, and strive to minimize food waste
+              for a greener future.
+            </p>
+          </div>
 
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32">
-            Step into our elegant yet inviting space, designed to transport you to the tranquil ambiance of a
-            traditional Japanese dining experience. Our soothing decor, soft lighting, and minimalist design provide the
-            perfect backdrop for an intimate dinner, a celebratory occasion, or a casual get-together with friends and
-            family.
-          </p>
-
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">
-            Commitment to Sustainability
-          </h1>
-
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32">
-            At New York City Sushi, we are not only dedicated to providing an exceptional dining experience but also to
-            preserving our planet for future generations. We are committed to sustainable sourcing practices, using
-            eco-friendly packaging, and minimizing food waste wherever possible.
-          </p>
-
-          <h1 className="font-bold underline text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
-
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32">
-            Our mission is simple: to create an unforgettable culinary journey for every guest who walks through our
-            doors. Whether you're a sushi aficionado or exploring Japanese cuisine for the first time, we aim to
-            captivate your senses with every bite, leaving you with a lasting memory of flavors, textures, and
-            experiences that are uniquely New York City Sushi.
-          </p>
-
-          <p className="font-bold leading-9 px-4 md:px-16 lg:px-32 pt-6 md:pt-6 lg:pt-8 pb-4 md:pb-4 lg:pb-6">
-            Join us at New York City Sushi as we continue to weave the artistry of sushi into the vibrant tapestry of
-            New York's culinary scene. Thank you for choosing us to be a part of your gastronomic adventure.
-          </p>
+          <div className="px-80 bg-gray-400 p-10  border-t-2  border-black">
+            <p className="text-2xl leading-9 pb-8">
+              Join us at New York City Sushi as we continue to weave the artistry of sushi into New York's culinary
+              scene.
+            </p>
+            <Link
+              className="bg-white text-xl font-semibold px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
+              href="/Order"
+            >
+              Order Food
+            </Link>
+            <Link
+              className="bg-white text-xl font-semibold ml-5 px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
+              href="/Order"
+            >
+              Book a Reservation
+            </Link>
+          </div>
         </div>
       </div>
       <Footer />
