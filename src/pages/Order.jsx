@@ -38,7 +38,7 @@ const Order = () => {
                 <div className="absolute border-solid border-2 border-black bg-black/40 h-full rounded-xl  text-white text-center w-full">
                   <p className="font-bold text-2xl px-2 pt-2">{item.name}</p>
                   <p className="font-bold text-[15px] px-2">Price: ${Number(item.price).toFixed(2)}</p>
-                  <button className="border hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2">
+                  <button className="border active:bg-blue-400 hover:bg-white hover:text-black duration-300 text-white bg-black mx-2 bottom-4 rounded px-4 py-2">
                     Order
                   </button>
                 </div>

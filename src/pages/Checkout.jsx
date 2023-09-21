@@ -17,7 +17,7 @@ const Checkout = () => {
             <div className="w-full h-auto text-center md:py-8 lg:py-10 text-white">
                 <h1 className="sm:text-xl md:text-2xl lg:text-3xl pt-4 md:pt-6 lg:pt-8">Your Orders:</h1>
                 <p className="px-4 md:px-16 lg:px-28 my-8">Your Cart is Empty</p>
-                <button className="px-6 py-2 hover:bg-black duration-300 border rounded-xl">Proceed to Checkout</button>
+                <button className="px-6 py-2 active:bg-blue-400 hover:bg-black duration-300 border rounded-xl">Proceed to Checkout</button>
             </div>
         </div>
         <Footer />
