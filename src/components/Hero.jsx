@@ -14,10 +14,10 @@ const Hero = () => {
         <h1 className="text-6xl mt-12 text-white">Indulge in Sushi Heaven: </h1>
         <p className="mb-5 pt-5 text-2xl font-bold">Satisfy Your Cravings Now</p>
         <div className="text-white">
-          <button className="px-6 py-2 hover:bg-black duration-300 border rounded-xl">
+          <button className="px-6 py-2 active:bg-blue-400 hover:bg-black duration-300 border rounded-xl">
             <Link href="/Specials">Get Specials</Link>
           </button>
-          <button className="px-6 py-2 hover:bg-black duration-300 ml-6 border rounded-xl">
+          <button className="px-6 py-2 active:bg-blue-400 hover:bg-black duration-300 ml-6 border rounded-xl">
             <Link href="/FAQ">FAQ</Link>
           </button>
         </div>

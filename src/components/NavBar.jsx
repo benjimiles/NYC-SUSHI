@@ -40,16 +40,16 @@ const NavBar = () => {
         </div>
         <div className="hidden md:flex">
           <ul className="font-bold flex items-center text-xl text-white">
-            <li className="cursor-pointer mx-4">
+            <li className="cursor-pointer active:text-blue-400 mx-4">
               <Link href="/About">About</Link>
             </li>
-            <li className="cursor-pointer mx-4">
+            <li className="cursor-pointer active:text-blue-400 mx-4">
               <Link href="/Order">Order</Link>
             </li>
-            <li className="cursor-pointer mx-4">
+            <li className="cursor-pointer active:text-blue-400 mx-4">
               <Link href="/Contact">Contact</Link>
             </li>
-            <li className="cursor-pointer mx-4">
+            <li className="cursor-pointer active:text-blue-400 mx-4">
               <Link href="/Checkout">Checkout</Link>
             </li>
             {isLoggedIn ? (
@@ -87,7 +87,7 @@ const NavBar = () => {
                       <div className="py-1">
                         <Menu.Item>
                           {({ active }) => (
-                            <a
+                            <Link
                               href="/Profile-settings"
                               className={classNames(
                                 active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -95,7 +95,7 @@ const NavBar = () => {
                               )}
                             >
                               Account settings
-                            </a>
+                            </Link>
                           )}
                         </Menu.Item>
                         <Menu.Item>
@@ -146,7 +146,7 @@ const NavBar = () => {
                 </Menu>
               </>
             ) : (
-              <button className="cursor-pointer mx-4">
+              <button className="cursor-pointer active:text-blue-400 mx-4">
                 <Link href="/Login">Login</Link>
               </button>
             )}{' '}
@@ -169,43 +169,119 @@ const NavBar = () => {
           }
         >
           <ul className="font-bold items-center text-xl text-white my-10">
-            <li className="cursor-pointer my-10">
+            <li className="cursor-pointer active:text-blue-400 my-10">
               <Link href="/About">About</Link>
             </li>
-            <li className="cursor-pointer mb-10">
+            <li className="cursor-pointer active:text-blue-400 mb-10">
               <Link href="/Order">Order</Link>
             </li>
-            <li className="cursor-pointer mb-10">
+            <li className="cursor-pointer active:text-blue-400 mb-10">
               <Link href="/Contact">Contact</Link>
             </li>
-            <li className="cursor-pointer mb-10">
+            <li className="cursor-pointer active:text-blue-400 mb-10">
               <Link href="/Checkout">Checkout</Link>
             </li>
-            <li className="cursor-pointer mb-10">
+            <li className="cursor-pointer active:text-blue-400 mb-10">
               <Link href="/Checkout">Checkout</Link>
             </li>
             {isLoggedIn ? (
-              <button className="cursor-pointer mb-10" onClick={handleLogout}>
-                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-                  <svg
-                    class="absolute w-12 h-12 text-gray-400 -left-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+              <>
+                <Menu as="div" className="relative inline-block text-left">
+                  <Menu.Button className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                    {userAvatarURL ? (
+                      <img src={userAvatarURL} className="w-12 h-12 object-cover" />
+                    ) : (
+                      <svg
+                        className="absolute w-12 h-12 text-gray-400 -left-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    )}
+                  </Menu.Button>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
                   >
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-              </button>
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div className="py-1">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              href="/Profile-settings"
+                              className={classNames(
+                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                'block px-4 py-2 text-sm'
+                              )}
+                            >
+                              Account settings
+                            </Link>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="#"
+                              className={classNames(
+                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                'block px-4 py-2 text-sm'
+                              )}
+                            >
+                              Support
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="#"
+                              className={classNames(
+                                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                'block px-4 py-2 text-sm'
+                              )}
+                            >
+                              License
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <form method="POST" action="#">
+                          <Menu.Item>
+                            {({ active }) => (
+                              <button
+                                type="submit"
+                                onClick={handleLogout}
+                                className={classNames(
+                                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
+                                  'block w-full px-4 py-2 text-left text-sm'
+                                )}
+                              >
+                                Sign out
+                              </button>
+                            )}
+                          </Menu.Item>
+                        </form>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              </>
             ) : (
-              <button className="cursor-pointer mb-10">
+              <button className="cursor-pointer active:text-blue-400 mx-4">
                 <Link href="/Login">Login</Link>
               </button>
-            )}
+            )}{' '}
           </ul>
         </div>
       </div>

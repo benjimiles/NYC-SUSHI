@@ -26,7 +26,7 @@ const Order = () => {
           <div className="text-6xl text-black mt-4 font-bold">Our Menu</div>
           <p className="pt-5 text-xl">
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.{' '}
-            <span className="cursor-pointer text-black">
+            <span className="cursor-pointer text-black font-bold active:text-blue-800">
               <Link href="Admin">Add more items</Link>
             </span>
           </p>
