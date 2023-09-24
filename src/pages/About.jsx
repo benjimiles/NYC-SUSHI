@@ -10,12 +10,12 @@ const About = () => {
       <NavBar />
       <div className="w-full flex-1 bg-[#9DB2BF]">
         <div className="w-full h-auto text-center text-black">
-          <div className="px-80 bg-gray-300 p-20">
+          <div className="bg-gray-300 p-10">
             <h1 className="font-bold text-6xl pb-2 md:pb-4 lg:pb-6">About Us</h1>
           </div>
 
-          <div className="px-80 bg-gray-400 p-20">
-            <h1 className="font-bold text-3xl pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
+          <div className="bg-gray-400 p-10">
+            <h1 className="font-bold text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Mission</h1>
 
             <p className="text-xl leading-9 px-4 md:px-16 lg:px-32">
               Our mission is simple: to create an unforgettable culinary journey for every guest who walks through our
@@ -25,8 +25,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="px-80 bg-gray-300 p-20">
-            <h1 className="font-bold text-3xl pb-2 md:pb-4 lg:pb-6">Our Story</h1>
+          <div className="px-40 bg-gray-300 p-10">
+            <h1 className="font-bold text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
 
             <p className="text-xl leading-9 pb-4">
               Established in 2023, New York City Sushi is a cherished fixture in the city's dining scene, known for
@@ -53,11 +53,12 @@ const About = () => {
             </p>
           </div>
 
-          <div className="px-80 bg-gray-400 p-10  border-t-2  border-black">
-            <p className="text-2xl leading-9 pb-8">
+          <div className="bg-gray-400 p-10 border-t-2  border-black">
+            <p className="text-2xl leading-9 pb-8 font-bold">
               Join us at New York City Sushi as we continue to weave the artistry of sushi into New York's culinary
               scene.
             </p>
+            <div className="flex">
             <Link
               className="bg-white text-xl font-semibold px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
               href="/Order"
@@ -70,6 +71,7 @@ const About = () => {
             >
               Book a Reservation
             </Link>
+            </div>
           </div>
         </div>
       </div>
