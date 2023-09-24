@@ -25,7 +25,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="px-40 bg-gray-300 p-10">
+          <div className="px-30 bg-gray-300 p-10">
             <h1 className="font-bold text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
 
             <p className="text-xl leading-9 pb-4">
@@ -60,13 +60,13 @@ const About = () => {
             </p>
             <div className="flex">
             <Link
-              className="bg-white text-xl font-semibold px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
+              className="bg-white hover:bg-black hover:text-white duration-300 active:bg-blue-400 text-xl font-semibold px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
               href="/Order"
             >
               Order Food
             </Link>
             <Link
-              className="bg-white text-xl font-semibold ml-5 px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
+              className="bg-white hover:bg-black hover:text-white duration-300 active:bg-blue-400 text-xl font-semibold ml-5 px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
               href="/Order"
             >
               Book a Reservation
