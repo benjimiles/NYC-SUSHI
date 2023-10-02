@@ -4,6 +4,7 @@ import Link from 'next/link';
 import 'tailwindcss/tailwind.css';
 import Footer from '../components/Footer';
 import jsonData from '../../FoodItem_data.json';
+
 const Order = () => {
   const [foodItems, setFoodItems] = useState([]);
 
@@ -18,6 +19,7 @@ const Order = () => {
 
       .catch((error) => console.error('Error fetching food items:', error));
   }, []);
+  
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
