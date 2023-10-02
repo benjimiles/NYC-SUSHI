@@ -18,7 +18,7 @@ const Hero = () => {
             <Link href="/Specials">Get Specials</Link>
           </button>
           <button className="px-6 py-2 active:bg-blue-400 hover:bg-black duration-300 ml-6 border rounded-xl">
-            <Link href="/FAQ">FAQ</Link>
+            <Link href="/Reservation">Book a Reservation</Link>
           </button>
         </div>
       </div>

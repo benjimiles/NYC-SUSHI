@@ -67,9 +67,9 @@ const About = () => {
             </Link>
             <Link
               className="bg-white hover:bg-black hover:text-white duration-300 active:bg-blue-400 text-xl font-semibold ml-5 px-10 py-2 border-2 border-black rounded-xl drop-shadow-xl"
-              href="/Order"
+              href="/FAQ"
             >
-              Book a Reservation
+              FAQ
             </Link>
             </div>
           </div>
