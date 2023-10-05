@@ -19,7 +19,7 @@ const About = () => {
 
             <p className="text-xl leading-9 px-4 md:px-16 lg:px-32">
               Our mission is simple: to create an unforgettable culinary journey for every guest who walks through our
-              doors. Whether you're a sushi aficionado or exploring Japanese cuisine for the first time, we aim to
+              doors. Whether you are a sushi aficionado or exploring Japanese cuisine for the first time, we aim to
               captivate your senses with every bite, leaving you with a lasting memory of flavors, textures, and
               experiences that are uniquely New York City Sushi.
             </p>
@@ -29,8 +29,8 @@ const About = () => {
             <h1 className="font-bold text-3xl pt-4 md:pt-6 lg:pt-8 pb-2 md:pb-4 lg:pb-6">Our Story</h1>
 
             <p className="text-xl leading-9 pb-4">
-              Established in 2023, New York City Sushi is a cherished fixture in the city's dining scene, known for
-              authentically bringing Japanese flavors to NYC. With a focus on sushi mastery and flavor refinement, we've
+              Established in 2023, New York City Sushi is a cherished fixture in the city dining scene, known for
+              authentically bringing Japanese flavors to NYC. With a focus on sushi mastery and flavor refinement, we have
               honed our craft over the years.
             </p>
 
