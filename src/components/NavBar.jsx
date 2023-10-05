@@ -30,7 +30,7 @@ const NavBar = () => {
     }
   }, [userData, userAvatarURL]);
   return (
-    <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10">
+    <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10 z-10">
       <div className="flex max-w-[1400px] h-full mx-auto px-4 items-center justify-between">
         <div className="cursor-pointer flex font-bold p-2 items-center text-xl">
           <img src="https://cdn-icons-png.flaticon.com/128/2252/2252076.png" className="w-14 mr-4 h-14"></img>
