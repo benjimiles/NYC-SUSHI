@@ -47,7 +47,7 @@ const About = () => {
             </p>
 
             <p className="text-xl leading-9 pb-4">
-              At New York City Sushi, we're not just about exceptional dining; we're also dedicated to preserving the
+              At New York City Sushi, we are not just about exceptional dining; we are also dedicated to preserving the
               planet. We uphold sustainable sourcing, employ eco-friendly packaging, and strive to minimize food waste
               for a greener future.
             </p>
@@ -55,7 +55,7 @@ const About = () => {
 
           <div className="bg-gray-400 p-10 border-t-2  border-black">
             <p className="text-2xl leading-9 pb-8 font-bold">
-              Join us at New York City Sushi as we continue to weave the artistry of sushi into New York's culinary
+              Join us at New York City Sushi as we continue to weave the artistry of sushi into New York culinary
               scene.
             </p>
             <div className="flex">

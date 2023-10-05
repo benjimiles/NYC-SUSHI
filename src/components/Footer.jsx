@@ -45,7 +45,7 @@ const Hero = () => {
         <div class="w-full md:w-1/7 sm:mx-auto sm:text-center">
           <ul class="">
             <li>
-              <a href="/Menu">Menu</a>
+              <Link href="/Menu">Menu</Link>
             </li>
             <li>
               <Link href="/Careers">Careers</Link>
@@ -61,16 +61,16 @@ const Hero = () => {
         <div class="w-full  md:w-1/7 sm:mx-auto sm:text-center">
           <ul class="">
             <li>
-              <a href="/Menu">Menu</a>
+              <Link href="/Menu">Menu</Link>
             </li>
             <li>
-              <a href="/Careers">Careers</a>
+              <Link href="/Careers">Careers</Link>
             </li>
             <li>
-              <a href="/Terms">Terms</a>
+              <Link href="/Terms">Terms</Link>
             </li>
             <li>
-              <a href="/About">About</a>
+              <Link href="/About">About</Link>
             </li>
           </ul>
         </div>
