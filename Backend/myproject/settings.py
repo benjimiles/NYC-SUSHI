@@ -59,6 +59,7 @@ CORS_ALLOW_ALL_ORIGINS = (
 )
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Assuming your frontend is running on localhost:3000
+    'https://sushi-master-d1u1opwem-seyuan111.vercel.app'
 ]
 ROOT_URLCONF = "myproject.urls"
 
