@@ -15,7 +15,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div class="py-10 flex mx-30">
+      <div class="py-10 flex flex-col sm:flex-row mx-30">
         <div class="w-full md:w-2/7 md:flex sm:mx-auto sm:text-center">
           <ul class="text-left">
             <li>Building Number: 74025</li>
