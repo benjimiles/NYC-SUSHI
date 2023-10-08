@@ -17,7 +17,7 @@ const Login = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await fetch('http://localhost:8000/authenticate/', {
+    const res = await fetch(process.env.AUTHENTICATE_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
