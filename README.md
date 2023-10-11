@@ -1,18 +1,17 @@
-# Welcome to [New York City Sushi](https://github.com/iamjuli3n/NYCSUSHI) README!
+# [New York City Sushi](https://github.com/benjimiles/NYC-Sushi) README!
 
-![New York City Sushi Logo](src/assets/sushi.png)
-
-Welcome to the New York City Sushi GitHub repository! Here, you'll find all the information and resources related to our fantastic sushi restaurant located in the heart of New York City. Whether you're a developer, a sushi enthusiast, or just curious about what we have to offer, this README will guide you through the details of our repository.
+Welcome to the New York City Sushi! 
+Here, you'll find all the information and resources related to our fantastic sushi restaurant located in the heart of New York City. 
+Whether you're a developer, a sushi enthusiast, or just curious about what we have to offer, this README will guide you through the details of our repository.
 
 ## Table of Contents
 
-- [About New York City Sushi](#about-sushidelightnyc)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact Information](#contact-information)
+- About New York City Sushi
+- Features
+- Getting Started
+- Technologies Used
+- Contributing
+- Contact Information
 
 ## About New York City Sushi
 
@@ -36,7 +35,7 @@ To get started with New York City Sushi, you can follow these steps:
 
 1. **Clone the Repository:** Clone this repository to your local machine using the following command:
 
-git clone https://github.com/iamjuli3n/NYCSUSHI
+git clone https://github.com/benjimiles/NYC-Sushi
 
 2. **Navigate:** Browse through the repository's folders to access different sections, such as the menu, customer reviews, and images.
 
@@ -64,15 +63,11 @@ We welcome contributions from the community to improve New York City Sushi's con
 
 Please note that all contributions are subject to review and approval by the repository maintainers.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Contact Information
 
 If you have any questions, suggestions, or just want to say hello, you can reach us at:
 
-- Email: info@bluepherretsoftware.com
+- Email: info@nycsushi.com
 - Website: [https://www.nycsushi.com](https://www.nycsushi.com)
 - Social Media: [@NYCSushi](https://www.instagram.com/sushidelightnyc)
 
