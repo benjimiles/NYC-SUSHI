@@ -41,7 +41,7 @@ const handleSubmit = async (e) => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full flex-1 bg-[#526D82]">
+      <div className="w-full flex-1 bg-neutral-800">
         <div className="flex justify-center items-center h-full p-20">
           {isLoggedIn ? (
             <p className="text-4xl font-bold text-center py-8 text-white">You are already logged in.</p>

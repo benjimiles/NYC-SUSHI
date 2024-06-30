@@ -30,24 +30,24 @@ const NavBar = () => {
     }
   }, [userData, userAvatarURL]);
   return (
-    <div className="w-full h-[70px] bg-[#001C30] border-b-2 py-10 z-10">
+    <div className="w-full h-[70px] bg-neutral-800/90 border-b-2 py-10 z-10">
       <div className="flex max-w-[1400px] h-full mx-auto px-4 items-center justify-between">
         <div className="cursor-pointer flex font-bold p-2 items-center text-xl">
           <img src="https://cdn-icons-png.flaticon.com/128/2252/2252076.png" className="w-14 mr-4 h-14"></img>
-          <h1 className="text-white font-Cinzel text-2xl">
+          <h1 className="text-white font-Cinzel text-sm sm:text-2xl">
             <Link href="/">NEW YORK CITY SUSHI</Link>
           </h1>
         </div>
 
         <div className="hidden md:flex">
           <ul className="font-bold flex items-center text-xl text-white">
-            <li className="cursor-pointer active:text-blue-400 mx-4">
+            <li className="cursor-pointer active:text-blue-400 hover:text-blue-400 duration-300 mx-4">
               <Link href="/About">About</Link>
             </li>
-            <li className="cursor-pointer active:text-blue-400 mx-4">
+            <li className="cursor-pointer active:text-blue-400 hover:text-blue-400 duration-300 mx-4">
               <Link href="/Order">Menu</Link>
             </li>
-            <li className="cursor-pointer active:text-blue-400 mx-4">
+            <li className="cursor-pointer active:text-blue-400 hover:text-blue-400 duration-300 mx-4">
               <Link href="/Contact">Contact</Link>
             </li>
           <div className="relative  mx-5 mr-5">
@@ -167,7 +167,7 @@ const NavBar = () => {
                 </Menu>
               </>
             ) : (
-              <button className="cursor-pointer active:text-blue-400 mx-4">
+              <button className="cursor-pointer active:text-blue-400 hover:text-blue-400 duration-300 mx-4">
                 <Link href="/Login">Login</Link>
               </button>
             )}{' '}
@@ -185,7 +185,7 @@ const NavBar = () => {
         <div
           className={
             nav
-              ? 'duration-300 w-full bg-gradient-to-r bg-[#001C30] absolute top-[70px] left-0 text-center justify-center flex'
+              ? 'duration-300 w-full bg-gradient-to-r bg-neutral-800 absolute top-[70px] left-0 text-center justify-center flex'
               : 'absolute left-[-100%]'
           }
         >

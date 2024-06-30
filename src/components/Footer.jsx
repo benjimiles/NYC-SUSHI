@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className="border-t-2 w-[100%] h-[20%]  flex flex-col  text-white bg-[#001C30] p-5">
+    <div className="border-t-2 w-[100%] h-[20%] flex flex-col  text-white bg-[#001C30] p-5">
       <div className="flex text-center items-center m-auto">
         <div>
-          <h1 className="font-bold text-3xl">New York City Sushi</h1>
+          <h1 className="text-3xl">New York City Sushi</h1>
           <p>Open From 8AM-6PM Monday-Friday</p>
         </div>
         <div>

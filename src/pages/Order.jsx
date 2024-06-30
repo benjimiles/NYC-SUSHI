@@ -23,12 +23,12 @@ const Order = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="flex-1 w-full bg-[#9DB2BF]">
+      <div className="flex-1 w-full bg-neutral-800">
         <div className="w-full h-[30%] text-center flex flex-col items-center justify-center text-white">
-          <div className="text-6xl text-black mt-4 font-bold">Our Menu</div>
+          <div className="text-4xl text-white mt-4">Our Menu</div>
           <p className="pt-5 text-xl">
             Order your favorite Sushi, Sashimi, and all the other Japanese Foods you desire here.{' '}
-            <span className="cursor-pointer text-black font-bold active:text-blue-800">
+            <span className="cursor-pointer text-blue-400 active:text-blue-800">
               <Link href="Admin">Add more items</Link>
             </span>
           </p>

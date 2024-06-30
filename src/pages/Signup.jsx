@@ -52,9 +52,9 @@ const Signup = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />
-      <div className="w-full flex-1 bg-[#526D82]">
+      <div className="w-full flex-1 bg-neutral-800">
         <div className="flex justify-center items-center h-full">
-        <form onSubmit={handleSignup} className="max-w-[400px] w-full mx-auto bg-white/70 text-black rounded-2xl my-10 p-8">
+        <form onSubmit={handleSignup} className="max-w-[400px] border-2 border-white w-full mx-auto bg-white/70 text-black rounded-2xl my-10 p-8">
               <BiArrowBack onClick={goBack} className="text-black relative cursor-pointer text-[20px]" />
               <h2 className="text-4xl font-bold text-center py-8 relative text-black">NYC Sushi Sign Up</h2>
               {isSignupSuccessful === false && (

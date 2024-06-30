@@ -4,12 +4,11 @@ import Link from 'next/link';
 
 const Hero = () => {
   return (
-    <div className="w-full h-full top-[100%] bg-zinc-900/70">
-      <img src="https://rb.gy/0kwgu" className="w-full h-full pb-[2px] object-cover absolute -z-10"></img>
+    <div className="w-full h-full top-[100%] bg-neutral-800">
 
-      <div className="w-full h-[100%] sm:px-12 lg:px-80 text-center flex flex-col items-center justify-center py-40 text-white">
-        <h2 className="text-6xl mt-6 text-white">Interested In Our Story? </h2>
-        <p className="text-2xl pb-20 sm:my-5 ">Embark on a Journey of Sushi Enchantment!</p>
+      <div className="w-full h-[100%] px-12 md:px-80 text-center flex flex-col items-center justify-center py-40 text-white">
+        <h2 className="text-3xl sm:text-6xl mt-4 text-white">Interested In Our Story? </h2>
+        <p className="text-md sm:text-2xl pb-6 my-6">Embark on a Journey of Sushi Enchantment!</p>
         <p className="text-white sm:text-2xl lg:text-xl">
           {' '}
           Nestled in the heart of the city that never sleeps, New York City Sushi is not just a restaurant; it is a
